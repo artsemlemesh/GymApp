@@ -13,7 +13,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os.path
 from pathlib import Path
 from decouple import config
+import dj_database_url
 
+from dotenv import load_dotenv
+
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -110,14 +114,38 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('DB_NAME', 'your_default_db_name'),
+#         'USER': os.getenv('DB_USER', 'your_default_db_user'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', 'your_default_db_password'),
+#         'HOST': os.getenv('DB_HOST', 'localhost'),
+#         'PORT': os.getenv('DB_PORT', '5432'),
+#     }
+# }
+
+
+
+
+
+
 # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": 'my_db',
-#         'USER': 'jerry',
-#         'PASSWORD': 'postgresql',
+#         "NAME": 'mydatabase',
+#         'USER': 'myuser',
+#         'PASSWORD': 'mypassword',
 #         'HOST': 'localhost',
-#         'PORT': '5432',  
+#         'PORT': '5432',
 #     }
 # }
 

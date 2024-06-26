@@ -7,3 +7,7 @@ endpoints:
     networkVisibility: Public
     context: /
     
+
+
+    # ARtem040036a
+    # scp -r /Users/mac/Documents/GymApp root@159.65.222.217:/root/
