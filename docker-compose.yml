@@ -1,3 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./GymF
+    ports:
+      - "3001:3001"
+  backend:
+    build: ./GymB
+    ports:
+      - "8000:8000"
+   
+
+
 # version: '3.8'
 
 # services:
@@ -24,15 +38,3 @@
 #       - ./frontend:/app
 
 
-version: '3.8'
-
-services:
-  frontend:
-    build: ./frontend
-    ports:
-      - "3001:3001"
-  backend:
-    build: ./gym-backend/gym_app
-    ports:
-      - "8000:8000"
-   
